@@ -1,6 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro'
+import Comic from '../components/Comic.astro'
 
 import pageOne from '../assets/Motion_001_V3.jpg'
 import pageTwo from '../assets/v2/Motion_001_V22.jpg'
@@ -32,34 +32,34 @@ import pageTwentySeven from '../assets/v2/Motion_001_V227.jpg'
 import pageTwentyEight from '../assets/v2/Motion_001_V228.jpg'
 
 const pages = [
-  pageOne,
-  pageTwo,
-  pageThree,
-  pageFour,
-  pageFive,
-  pageSix,
-  pageSeven,
-  pageEight,
-  pageNine,
-  pageTen,
-  pageEleven,
-  pageTwelve,
-  pageThirteen,
-  pageFourteen,
-  pageFifteen,
-  pageSixteen,
-  pageSeventeen,
-  pageEighteen,
-  pageNineteen,
-  pageTwenty,
-  pageTwentyOne,
-  pageTwentyTwo,
-  pageTwentyThree,
-  pageTwenyFour,
-  pageTwentyFive,
-  pageTwentySix,
-  pageTwentySeven,
-  pageTwentyEight
+  pageOne.src,
+  pageTwo.src,
+  pageThree.src,
+  pageFour.src,
+  pageFive.src,
+  pageSix.src,
+  pageSeven.src,
+  pageEight.src,
+  pageNine.src,
+  pageTen.src,
+  pageEleven.src,
+  pageTwelve.src,
+  pageThirteen.src,
+  pageFourteen.src,
+  pageFifteen.src,
+  pageSixteen.src,
+  pageSeventeen.src,
+  pageEighteen.src,
+  pageNineteen.src,
+  pageTwenty.src,
+  pageTwentyOne.src,
+  pageTwentyTwo.src,
+  pageTwentyThree.src,
+  pageTwenyFour.src,
+  pageTwentyFive.src,
+  pageTwentySix.src,
+  pageTwentySeven.src,
+  pageTwentyEight.src
 ];
 ---
 
@@ -67,18 +67,7 @@ const pages = [
 	<main>
 		<h1 class="text-md uppsercase text-center">Motion Photo Book Sample</h1>
         <a class="font-mono text-sm underline mt-4" href="../">Full Bleed</a>
-		<div id="book">
-			{pages.map((page, index) => (
-				<div class="my-page">
-					<Image 
-						class="lg:top-8 relative" 
-						src={page} 
-						title={`Photo Page ${index + 1}`}
-						alt={`Page ${index + 1}`}
-					/>
-				</div>
-			))}
-		</div>
+		<Comic pages={pages} />
 	</main>
 </Layout>
 
@@ -99,26 +88,3 @@ const pages = [
 		line-height: 1.6;
 	}
 </style>
-<script>
-	import {PageFlip} from 'page-flip'
-	const bookElement = document.getElementById('book');
-
-	if (bookElement) {
-			const pageFlip = new PageFlip(bookElement, {
-				width: 396, // required parameter - base page width
-				height: 645,  // required parameter - base page height,
-				minWidth: 396,
-				minHeight: 612,
-				maxWidth: 396,
-				maxHeight: 612,
-				showCover: true,
-				drawShadow: true,
-				flippingTime: 500,
-				mobileScrollSupport: true
-			});
-
-			pageFlip.loadFromHTML(document.querySelectorAll('.my-page'))
-		} else {
-			console.error('Element with id "book" not found');
-		}
-</script>

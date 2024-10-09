@@ -1,0 +1,42 @@
+---
+interface Props {
+	pages: string[];
+}
+
+const { pages } = Astro.props;
+---
+<div id="book">
+    {pages.map((page, index) => (
+        <div class="my-page">
+            <img 
+                class="lg:top-8 relative" 
+                src={page} 
+                title={`Photo Page ${index + 1}`}
+                alt={`Page ${index + 1}`}
+            />
+        </div>
+    ))}
+</div>
+<script>
+	import {PageFlip} from 'page-flip'
+	const bookElement = document.getElementById('book');
+
+	if (bookElement) {
+			const pageFlip = new PageFlip(bookElement, {
+				width: 396, // required parameter - base page width
+				height: 645,  // required parameter - base page height,
+				minWidth: 396,
+				minHeight: 612,
+				maxWidth: 396,
+				maxHeight: 612,
+				showCover: true,
+				drawShadow: true,
+				flippingTime: 500,
+				mobileScrollSupport: true
+			});
+
+			pageFlip.loadFromHTML(document.querySelectorAll('.my-page'))
+		} else {
+			console.error('Element with id "book" not found');
+		}
+</script>

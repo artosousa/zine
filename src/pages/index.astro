@@ -1,96 +1,85 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { Image } from 'astro:assets';
+import Comic from '../components/Comic.astro';
 
-import pageOne from '../assets/Motion_001_V3.jpg'
-import pageTwo from '../assets/Motion_001_V32.jpg'
-import pageThree from '../assets/Motion_001_V33.jpg'
-import pageFour from '../assets/Motion_001_V34.jpg'
-import pageFive from '../assets/Motion_001_V35.jpg'
-import pageSix from '../assets/Motion_001_V36.jpg'
-import pageSeven from '../assets/Motion_001_V37.jpg'
-import pageEight from '../assets/Motion_001_V38.jpg'
-import pageNine from '../assets/Motion_001_V39.jpg'
-import pageTen from '../assets/Motion_001_V310.jpg'
-import pageEleven from '../assets/Motion_001_V311.jpg'
-import pageTwelve from '../assets/Motion_001_V312.jpg'
-import pageThirteen from '../assets/Motion_001_V313.jpg'
-import pageFourteen from '../assets/Motion_001_V314.jpg'
-import pageFifteen from '../assets/Motion_001_V315.jpg'
-import pageSixteen from '../assets/Motion_001_V316.jpg'
-import pageSeventeen from '../assets/Motion_001_V317.jpg'
-import pageEighteen from '../assets/Motion_001_V318.jpg'
-import pageNineteen from '../assets/Motion_001_V319.jpg'
-import pageTwenty from '../assets/Motion_001_V320.jpg'
-import pageTwentyOne from '../assets/Motion_001_V321.jpg'
-import pageTwentyTwo from '../assets/Motion_001_V322.jpg'
-import pageTwentyThree from '../assets/Motion_001_V323.jpg'
-import pageTwenyFour from '../assets/Motion_001_V324.jpg'
-import pageTwentyFive from '../assets/Motion_001_V325.jpg'
-import pageTwentySix from '../assets/Motion_001_V326.jpg'
-import pageTwentySeven from '../assets/Motion_001_V327.jpg'
-import pageTwentyEight from '../assets/Motion_001_V328.jpg'
+import pageOne from '../assets/Motion_001_V3.jpg';
+import pageTwo from '../assets/Motion_001_V32.jpg';
+import pageThree from '../assets/Motion_001_V33.jpg';
+import pageFour from '../assets/Motion_001_V34.jpg';
+import pageFive from '../assets/Motion_001_V35.jpg';
+import pageSix from '../assets/Motion_001_V36.jpg';
+import pageSeven from '../assets/Motion_001_V37.jpg';
+import pageEight from '../assets/Motion_001_V38.jpg';
+import pageNine from '../assets/Motion_001_V39.jpg';
+import pageTen from '../assets/Motion_001_V310.jpg';
+import pageEleven from '../assets/Motion_001_V311.jpg';
+import pageTwelve from '../assets/Motion_001_V312.jpg';
+import pageThirteen from '../assets/Motion_001_V313.jpg';
+import pageFourteen from '../assets/Motion_001_V314.jpg';
+import pageFifteen from '../assets/Motion_001_V315.jpg';
+import pageSixteen from '../assets/Motion_001_V316.jpg';
+import pageSeventeen from '../assets/Motion_001_V317.jpg';
+import pageEighteen from '../assets/Motion_001_V318.jpg';
+import pageNineteen from '../assets/Motion_001_V319.jpg';
+import pageTwenty from '../assets/Motion_001_V320.jpg';
+import pageTwentyOne from '../assets/Motion_001_V321.jpg';
+import pageTwentyTwo from '../assets/Motion_001_V322.jpg';
+import pageTwentyThree from '../assets/Motion_001_V323.jpg';
+import pageTwentyFour from '../assets/Motion_001_V324.jpg';
+import pageTwentyFive from '../assets/Motion_001_V325.jpg';
+import pageTwentySix from '../assets/Motion_001_V326.jpg';
+import pageTwentySeven from '../assets/Motion_001_V327.jpg';
+import pageTwentyEight from '../assets/Motion_001_V328.jpg';
 
 const pages = [
-  pageOne,
-  pageTwo,
-  pageThree,
-  pageFour,
-  pageFive,
-  pageSix,
-  pageSeven,
-  pageEight,
-  pageNine,
-  pageTen,
-  pageEleven,
-  pageTwelve,
-  pageThirteen,
-  pageFourteen,
-  pageFifteen,
-  pageSixteen,
-  pageSeventeen,
-  pageEighteen,
-  pageNineteen,
-  pageTwenty,
-  pageTwentyOne,
-  pageTwentyTwo,
-  pageTwentyThree,
-  pageTwenyFour,
-  pageTwentyFive,
-  pageTwentySix,
-  pageTwentySeven,
-  pageTwentyEight
+  pageOne.src,
+  pageTwo.src,
+  pageThree.src,
+  pageFour.src,
+  pageFive.src,
+  pageSix.src,
+  pageSeven.src,
+  pageEight.src,
+  pageNine.src,
+  pageTen.src,
+  pageEleven.src,
+  pageTwelve.src,
+  pageThirteen.src,
+  pageFourteen.src,
+  pageFifteen.src,
+  pageSixteen.src,
+  pageSeventeen.src,
+  pageEighteen.src,
+  pageNineteen.src,
+  pageTwenty.src,
+  pageTwentyOne.src,
+  pageTwentyTwo.src,
+  pageTwentyThree.src,
+  pageTwentyFour.src,
+  pageTwentyFive.src,
+  pageTwentySix.src,
+  pageTwentySeven.src,
+  pageTwentyEight.src,
 ];
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1 class="text-md uppsercase text-center">Motion Photo Book Sample</h1>
+		<h1 class="text-md uppercase text-center">Motion Photo Book Sample</h1>
 		<a class="font-mono text-sm underline mt-4" href="./v2">Version 2</a>
-		<div id="book">
-			{pages.map((page, index) => (
-				<div class="my-page">
-					<Image 
-						class="lg:top-8 relative" 
-						src={page} 
-						title={`Photo Page ${index + 1}`}
-						alt={`Page ${index + 1}`}
-					/>
-				</div>
-			))}
-		</div>
+		<Comic pages={pages} />
 	</main>
 </Layout>
 
 <style>
-	body{
+	body {
 		overflow: hidden;
 	}
 	main {
 		margin: auto;
 		padding: 1rem;
 		width: 100%;
-		display:flex;
+		display: flex;
 		align-items: center;
 		flex-direction: column;
 		justify-content: center;
@@ -99,26 +88,3 @@ const pages = [
 		line-height: 1.6;
 	}
 </style>
-<script>
-	import {PageFlip} from 'page-flip'
-	const bookElement = document.getElementById('book');
-
-	if (bookElement) {
-			const pageFlip = new PageFlip(bookElement, {
-				width: 396, // required parameter - base page width
-				height: 645,  // required parameter - base page height,
-				minWidth: 396,
-				minHeight: 612,
-				maxWidth: 396,
-				maxHeight: 612,
-				showCover: true,
-				drawShadow: true,
-				flippingTime: 500,
-				mobileScrollSupport: true
-			});
-
-			pageFlip.loadFromHTML(document.querySelectorAll('.my-page'))
-		} else {
-			console.error('Element with id "book" not found');
-		}
-</script>
