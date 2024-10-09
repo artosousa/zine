@@ -30,9 +30,9 @@ const { pages } = Astro.props;
 				maxWidth: 396,
 				maxHeight: 612,
 				showCover: true,
-				drawShadow: true,
+				drawShadow: false,
 				flippingTime: 500,
-				mobileScrollSupport: true
+				mobileScrollSupport: false
 			});
 
 			pageFlip.loadFromHTML(document.querySelectorAll('.my-page'))
