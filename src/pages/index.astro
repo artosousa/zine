@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Comic from '../components/Comic.astro';
+import PageTitle from '../components/PageTitle.astro';
 
 import pageOne from '../assets/Motion_001_V3.jpg';
 import pageTwo from '../assets/Motion_001_V32.jpg';
@@ -65,8 +66,7 @@ const pages = [
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1 class="text-md uppercase text-center">Motion Photo Book Sample</h1>
-		<a class="font-mono text-sm underline mt-4" href="./v2">Version 2</a>
+		<PageTitle title='MOTION ZINE PREVIEW' href='./v2' link_text='V2: White Space' />
 		<Comic pages={pages} />
 	</main>
 </Layout>

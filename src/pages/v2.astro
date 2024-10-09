@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Comic from '../components/Comic.astro'
+import PageTitle from '../components/PageTitle.astro'
 
 import pageOne from '../assets/Motion_001_V3.jpg'
 import pageTwo from '../assets/v2/Motion_001_V22.jpg'
@@ -30,6 +31,7 @@ import pageTwentyFive from '../assets/v2/Motion_001_V225.jpg'
 import pageTwentySix from '../assets/v2/Motion_001_V226.jpg'
 import pageTwentySeven from '../assets/v2/Motion_001_V227.jpg'
 import pageTwentyEight from '../assets/v2/Motion_001_V228.jpg'
+
 
 const pages = [
   pageOne.src,
@@ -65,8 +67,7 @@ const pages = [
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1 class="text-md uppsercase text-center">Motion Photo Book Sample</h1>
-        <a class="font-mono text-sm underline mt-4" href="../">Full Bleed</a>
+		<PageTitle title='MOTION ZINE PREVIEW' href='../' link_text='V1: Full Bleed' />
 		<Comic pages={pages} />
 	</main>
 </Layout>
