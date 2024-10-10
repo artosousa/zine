@@ -1,0 +1,123 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Comic from '../components/Comic.astro'
+import PageTitle from '../components/PageTitle.astro'
+
+import pageOne from '../assets/v4/Motion_001_V4.jpg'
+import pageTwo from '../assets/v4/Motion_001_V42.jpg'
+import pageThree from '../assets/v4/Motion_001_V43.jpg'
+import pageFour from '../assets/v4/Motion_001_V44.jpg'
+import pageFive from '../assets/v4/Motion_001_V45.jpg'
+import pageSix from '../assets/v4/Motion_001_V46.jpg'
+import pageSeven from '../assets/v4/Motion_001_V47.jpg'
+import pageEight from '../assets/v4/Motion_001_V48.jpg'
+import pageNine from '../assets/v4/Motion_001_V49.jpg'
+import pageTen from '../assets/v4/Motion_001_V410.jpg'
+import pageEleven from '../assets/v4/Motion_001_V411.jpg'
+import pageTwelve from '../assets/v4/Motion_001_V412.jpg'
+import pageThirteen from '../assets/v4/Motion_001_V413.jpg'
+import pageFourteen from '../assets/v4/Motion_001_V414.jpg'
+import pageFifteen from '../assets/v4/Motion_001_V415.jpg'
+import pageSixteen from '../assets/v4/Motion_001_V416.jpg'
+import pageSeventeen from '../assets/v4/Motion_001_V417.jpg'
+import pageEighteen from '../assets/v4/Motion_001_V418.jpg'
+import pageNineteen from '../assets/v4/Motion_001_V419.jpg'
+import pageTwenty from '../assets/v4/Motion_001_V420.jpg'
+import pageTwentyOne from '../assets/v4/Motion_001_V421.jpg'
+import pageTwentyTwo from '../assets/v4/Motion_001_V422.jpg'
+import pageTwentyThree from '../assets/v4/Motion_001_V423.jpg'
+import pageTwenyFour from '../assets/v4/Motion_001_V424.jpg'
+import pageTwentyFive from '../assets/v4/Motion_001_V425.jpg'
+import pageTwentySix from '../assets/v4/Motion_001_V426.jpg'
+import pageTwentySeven from '../assets/v4/Motion_001_V427.jpg'
+import pageTwentyEight from '../assets/v4/Motion_001_V428.jpg'
+import pageTwentyNine from '../assets/v4/Motion_001_V429.jpg'
+import pageThirty from '../assets/v4/Motion_001_V430.jpg'
+import pageThirtyOne from '../assets/v4/Motion_001_V431.jpg'
+import pageThirtyTwo from '../assets/v4/Motion_001_V432.jpg'
+import pageThirtyThree from '../assets/v4/Motion_001_V433.jpg'
+import pageThirtyFour from '../assets/v4/Motion_001_V434.jpg'
+import pageThirtyFive from '../assets/v4/Motion_001_V435.jpg'
+import pageThirtySix from '../assets/v4/Motion_001_V436.jpg'
+import pageThirtySeven from '../assets/v4/Motion_001_V437.jpg'
+import pageThirtyEight from '../assets/v4/Motion_001_V438.jpg'
+import pageThirtyNine from '../assets/v4/Motion_001_V439.jpg'
+import pageFourty from '../assets/v4/Motion_001_V440.jpg'
+import pageFourtyOne from '../assets/v4/Motion_001_V441.jpg'
+import pageFourtyTwo from '../assets/v4/Motion_001_V442.jpg'
+import pageFourtyThree from '../assets/v4/Motion_001_V443.jpg'
+import pageFourtyFour from '../assets/v4/Motion_001_V444.jpg'
+
+
+const pages = [
+  pageOne.src,
+  pageTwo.src,
+  pageThree.src,
+  pageFour.src,
+  pageFive.src,
+  pageSix.src,
+  pageSeven.src,
+  pageEight.src,
+  pageNine.src,
+  pageTen.src,
+  pageEleven.src,
+  pageTwelve.src,
+  pageThirteen.src,
+  pageFourteen.src,
+  pageFifteen.src,
+  pageSixteen.src,
+  pageSeventeen.src,
+  pageEighteen.src,
+  pageNineteen.src,
+  pageTwenty.src,
+  pageTwentyOne.src,
+  pageTwentyTwo.src,
+  pageTwentyThree.src,
+  pageTwenyFour.src,
+  pageTwentyFive.src,
+  pageTwentySix.src,
+  pageTwentySeven.src,
+  pageTwentyEight.src,
+  pageTwentyNine.src,
+  pageThirty.src,
+  pageThirtyOne.src,
+  pageThirtyTwo.src,
+  pageThirtyThree.src,
+  pageThirtyFour.src,
+  pageThirtyFive.src,
+  pageThirtySix.src,
+  pageThirtySeven.src,
+  pageThirtyEight.src,
+  pageThirtyNine.src,
+  pageFourty.src,
+  pageFourtyOne.src,
+  pageFourtyTwo.src,
+  pageFourtyThree.src,
+  pageFourtyFour.src
+];
+---
+
+<Layout title="Motion">
+	<main>
+		<PageTitle title='MOTION ZINE PREVIEW' href='../' link_text='V1: Full Bleed' />
+		<Comic pages={pages} />
+	</main>
+</Layout>
+
+<style>
+	body{
+		overflow: hidden;
+	}
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 100%;
+		display:flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+</style>
