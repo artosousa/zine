@@ -23,12 +23,12 @@ const { pages } = Astro.props;
 
 	if (bookElement) {
 			const pageFlip = new PageFlip(bookElement, {
-				width: 396, // required parameter - base page width
-				height: 645,  // required parameter - base page height,
-				minWidth: 396,
-				minHeight: 612,
-				maxWidth: 396,
-				maxHeight: 612,
+				width: 396 * 2, // required parameter - base page width
+				height: 645 * 2,  // required parameter - base page height,
+				minWidth: 396 * 2,
+				minHeight: 612 * 2,
+				maxWidth: 396 * 2,
+				maxHeight: 612 * 2,
 				showCover: true,
 				drawShadow: false,
 				flippingTime: 500,
